@@ -3,8 +3,8 @@ import InfoCalculation from "../../views/components/InfoCalculation";
 
 const InfoPage = () => {
   return (
-    <div className="container">
-      <div className="inner w-100 h-100 d-flex flex-row justify-content-center mt-5">
+    <div className="container pt-2">
+      <div className="inner w-100 h-100 flex-row">
         <InfoCalculation />
       </div>
     </div>

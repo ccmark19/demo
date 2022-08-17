@@ -10,7 +10,14 @@ import {
 
 const ShowAreaChart = ({ data }) => {
   return (
-    <>
+    <div
+      style={{
+        background: "#eef1f3",
+        border: "none",
+        borderRadius: "5px",
+        paddingBlock: "1em",
+      }}
+    >
       {/* <ResponsiveContainer width="100%" height="400px"> */}
       <AreaChart
         width={600}
@@ -25,11 +32,17 @@ const ShowAreaChart = ({ data }) => {
           vertical={false}
         />
         <defs>
-          <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
-            <>
-              <stop offset="5%" stopColor="#59d0aa" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="#59d0aa" stopOpacity={0} />
-            </>
+          <linearGradient id="price" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="quantity" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="cost" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#FFA500" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#FFA500" stopOpacity={0} />
           </linearGradient>
         </defs>
         <XAxis dataKey="name" />
@@ -39,11 +52,26 @@ const ShowAreaChart = ({ data }) => {
           type="monotone"
           dataKey="price"
           stroke="#8884d8"
-          fill="url(#colorPrice)"
+          // fillOpacity={1}
+          fill="url(#price)"
+        />
+        <Area
+          type="monotone"
+          dataKey="quantity"
+          stroke="#82ca9d"
+          // fillOpacity={1}
+          fill="url(#quantity)"
+        />
+        <Area
+          type="monotone"
+          dataKey="cost"
+          stroke="#FFA500"
+          // fillOpacity={1}
+          fill="url(#cost)"
         />
       </AreaChart>
       {/* </ResponsiveContainer> */}
-    </>
+    </div>
   );
 };
 
