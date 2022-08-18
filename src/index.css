@@ -4,9 +4,11 @@ body,
 .App,
 .container {
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 
 .App {
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
+    /* background: #0b192a;     */
+    background-image: linear-gradient(to right bottom, #020024, #103259, #156393, #089acb, #00d4ff);
 }

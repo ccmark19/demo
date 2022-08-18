@@ -7,15 +7,19 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import styles from "./ShowChart.module.css";
 
 const ShowAreaChart = ({ data }) => {
   return (
     <div
+      className={styles.chartBg}
       style={{
-        background: "#eef1f3",
+        // background: "#eef1f3",
         border: "none",
-        borderRadius: "5px",
-        paddingBlock: "1em",
+        borderRadius: "15px",
+        height: "min-content",
+        paddingInline: "1em",
+        paddingBlock: "2em",
       }}
     >
       {/* <ResponsiveContainer width="100%" height="400px"> */}
@@ -45,8 +49,8 @@ const ShowAreaChart = ({ data }) => {
             <stop offset="95%" stopColor="#FFA500" stopOpacity={0} />
           </linearGradient>
         </defs>
-        <XAxis dataKey="name" />
-        <YAxis tickLine={false} />
+        <XAxis dataKey="name" style={{ fill: "white" }} />
+        <YAxis tickLine={false} style={{ fill: "white" }} />
         <Tooltip />
         <Area
           type="monotone"

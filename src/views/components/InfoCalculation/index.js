@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import ShownAreaChart from "./ShowAreaChart";
 import ShowRadialBarChart from "./ShowRadialBarChart";
 import ShowRadarChart from "./ShowRadarChart";
+import ShowPieChart from "./ShowPieChart";
 import ShowResultTable from "./ShowResultTable";
 import styles from "./ShowAreaChartView.module.css";
 
@@ -32,13 +33,13 @@ const InfoCalculation = () => {
     { id: 3, name: "Mar", price: 40, quantity: 40, cost: 20 },
     { id: 4, name: "Apr", price: 35, quantity: 48, cost: 25 },
     { id: 5, name: "May", price: 30, quantity: 55, cost: 35 },
-    { id: 6, name: "Jun", price: 50, quantity: 40, cost: 45 },
-    { id: 7, name: "Jul", price: 55, quantity: 35, cost: 40 },
-    { id: 8, name: "Aug", price: 60, quantity: 30, cost: 35 },
-    { id: 9, name: "Sep", price: 36, quantity: 28, cost: 30 },
-    { id: 10, name: "Oct", price: 28, quantity: 35, cost: 25 },
-    { id: 11, name: "Nov", price: 40, quantity: 37, cost: 20 },
-    { id: 12, name: "Dec", price: 45, quantity: 30, cost: 22 },
+    // { id: 6, name: "Jun", price: 50, quantity: 40, cost: 45 },
+    // { id: 7, name: "Jul", price: 55, quantity: 35, cost: 40 },
+    // { id: 8, name: "Aug", price: 60, quantity: 30, cost: 35 },
+    // { id: 9, name: "Sep", price: 36, quantity: 28, cost: 30 },
+    // { id: 10, name: "Oct", price: 28, quantity: 35, cost: 25 },
+    // { id: 11, name: "Nov", price: 40, quantity: 37, cost: 20 },
+    // { id: 12, name: "Dec", price: 45, quantity: 30, cost: 22 },
   ];
 
   const handleDateChange = () => {
@@ -62,7 +63,7 @@ const InfoCalculation = () => {
               border: "none",
               borderRadius: "5px",
             }}
-            className="form-control"
+            className="form-control bg-text-muted"
             aria-label="Small"
             aria-describedby="inputGroup-sizing-sm"
             type="date"
@@ -93,9 +94,10 @@ const InfoCalculation = () => {
           className="result-group mt-5 d-flex"
           style={{ justifyContent: "space-between" }}
         >
+          {/* <ShowRadarChart /> */}
+          <ShowPieChart />
+          {/* <ShowRadialBarChart /> */}
           <ShownAreaChart data={data} />
-          <ShowRadialBarChart />
-          <ShowRadarChart />
         </div>
         <div className="result-table mt-5">
           <ShowResultTable data={data} />
