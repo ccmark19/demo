@@ -7,9 +7,11 @@ const ShowResultTable = ({ data }) => {
       style={{
         // background: "#eef1f3",
         border: "none",
-        borderRadius: "5px",
+        borderRadius: "15px",
         // paddingBlock: "1em",
         padding: "3em",
+        maxHeight: "47vh",
+        // overflow: "auto",
       }}
     >
       <table className="table text-white">
@@ -25,7 +27,6 @@ const ShowResultTable = ({ data }) => {
         <tbody>
           {data
             ? data.map((item) => {
-                console.log(item);
                 return (
                   <tr key={item.id}>
                     <th scope="row">{item.id}</th>
@@ -41,48 +42,48 @@ const ShowResultTable = ({ data }) => {
       </table>
       <nav
         aria-label="Page navigation example"
-        className="d-flex justify-content-center"
+        className="d-flex justify-content-center mt-2"
       >
-        <ul class="pagination">
-          <li class="page-item">
+        <ul className="pagination">
+          <li className="page-item">
             <a
-              class="page-link text-light"
+              className="page-link text-light"
               href="#"
               style={{ background: "#ff000000" }}
             >
               Previous
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link text-light"
+              className="page-link text-light"
               href="#"
               style={{ background: "#ff000000" }}
             >
               1
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link text-light"
+              className="page-link text-light"
               href="#"
               style={{ background: "#ff000000" }}
             >
               2
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link text-light"
+              className="page-link text-light"
               href="#"
               style={{ background: "#ff000000" }}
             >
               3
             </a>
           </li>
-          <li class="page-item">
+          <li className="page-item">
             <a
-              class="page-link text-light"
+              className="page-link text-light"
               href="#"
               style={{ background: "#ff000000" }}
             >
