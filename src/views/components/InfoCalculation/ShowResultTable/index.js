@@ -19,9 +19,9 @@ const ShowResultTable = ({ data }) => {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Month</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Cost</th>
+            <th scope="col">屠宰企业屠宰量（万头）</th>
+            <th scope="col">生猪每头产值（元）</th>
+            <th scope="col">生猪每头成本（元）</th>
           </tr>
         </thead>
         <tbody>
@@ -30,10 +30,10 @@ const ShowResultTable = ({ data }) => {
                 return (
                   <tr key={item.id}>
                     <th scope="row">{item.id}</th>
-                    <td>{item.name}</td>
-                    <td>{item.price}</td>
-                    <td>{item.quantity}</td>
-                    <td>{item.cost}</td>
+                    <td className="text-center">{item.name}</td>
+                    <td className="text-center">{item.price}</td>
+                    <td className="text-center">{item.quantity}</td>
+                    <td className="text-center">{item.cost}</td>
                   </tr>
                 );
               })

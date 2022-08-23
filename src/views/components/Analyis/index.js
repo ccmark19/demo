@@ -1,7 +1,13 @@
 import styles from "./Analyis.module.css";
 const Analyis = ({ report }) => {
   return (
-    <div className={styles.chartBg} style={{ color: "white" }}>
+    <div
+      className={styles.chartBg}
+      style={{
+        color: "white",
+        width: "300px",
+      }}
+    >
       <div className="d-flex flex-column">
         {report
           ? Object.keys(report).map((item, key) => {

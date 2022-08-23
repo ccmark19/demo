@@ -8,6 +8,6 @@
     width: "-webkit-fill-available";
         /* height: -webkit-fill-available !important; */
             border-radius: 15px;
-            padding-inline: 1em;
-            padding-block: 2em;
+            padding-left: 2em;
+            padding-block-start: 3em;                    
 }

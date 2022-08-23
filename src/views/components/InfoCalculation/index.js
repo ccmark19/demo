@@ -18,12 +18,12 @@ const InfoCalculation = () => {
   const [report, setReport] = useState(null);
 
   const defaultData = [
-    { id: 1, name: "Jan", price: 39, quantity: 50, cost: 16 },
-    { id: 2, name: "Feb", price: 50, quantity: 45, cost: 18 },
-    { id: 3, name: "Mar", price: 40, quantity: 40, cost: 20 },
-    { id: 4, name: "Apr", price: 35, quantity: 48, cost: 25 },
-    { id: 5, name: "May", price: 30, quantity: 55, cost: 35 },
-    { id: 6, name: "Jun", price: 50, quantity: 40, cost: 45 },
+    { id: 1, name: "Jan", price: 2847, quantity: 2025, cost: 1978 },
+    { id: 2, name: "Feb", price: 1568, quantity: 1767, cost: 1891 },
+    { id: 3, name: "Mar", price: 2590, quantity: 1653, cost: 1898 },
+    { id: 4, name: "Apr", price: 2738, quantity: 1798, cost: 1933 },
+    { id: 5, name: "May", price: 2530, quantity: 2058, cost: 1970 },
+    { id: 6, name: "Jun", price: 2413, quantity: 2189, cost: 2002 },
     // { id: 7, name: "Jul", price: 55, quantity: 35, cost: 40 },
     // { id: 8, name: "Aug", price: 60, quantity: 30, cost: 35 },
     // { id: 9, name: "Sep", price: 36, quantity: 28, cost: 30 },
@@ -37,25 +37,29 @@ const InfoCalculation = () => {
     setDate(tempData);
   };
 
-  useEffect(() => {
+  const handleReport = () => {
     setData(defaultData);
-  }, []);
+  };
+
+  // useEffect(() => {
+  //   setData(defaultData);
+  // }, []);
 
   useEffect(() => {
-    let targetDate = moment(new Date(date))
-      .add(targetMonthRange, "months")
-      .calendar();
-    targetDate = moment(targetDate).format("M/D/YYYY");
+    if (data) {
+      let targetDate = moment(new Date(date))
+        .add(targetMonthRange, "months")
+        .calendar();
+      targetDate = moment(targetDate).format("M/D/YYYY");
 
-    sampleData.map((item) => {
-      const tempDate = item.Date;
-      if (targetDate == tempDate) {
-        // return item;
-        setReport(item);
-      }
-      // or found most related item
-    });
-  }, [date]);
+      sampleData.map((item) => {
+        const tempDate = item.Date;
+        if (targetDate == tempDate) {
+          setReport(item);
+        }
+      });
+    }
+  }, [date, data]);
 
   return (
     <>
@@ -89,6 +93,7 @@ const InfoCalculation = () => {
                 background: "#74efae",
                 border: "none",
               }}
+              onClick={() => handleReport()}
             >
               Report
             </span>
