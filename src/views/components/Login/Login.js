@@ -46,7 +46,9 @@ const Login = ({ setPass, setAcct }) => {
               placeholder="Remember me"
               id="rmb"
             />
-            <label for="rmb">Remember me</label>
+            <label for="rmb" className="text-light">
+              Remember me
+            </label>
           </div>
           <button
             className="w-100 btn btn-lg btn-primary"

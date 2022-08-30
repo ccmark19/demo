@@ -18,6 +18,14 @@ function App() {
           />
         )}
       </div>
+      <footer class="bg-light text-center text-lg-start">
+        <div
+          class="text-center p-3 text-white-50"
+          style={{ backgroundColor: "#0a2351" }}
+        >
+          Big Data Research Lab @University of Waterloo
+        </div>
+      </footer>
     </div>
   );
 }
